@@ -258,14 +258,14 @@ const resumeData = {
       degree: "Master of Arts (M.A.) in English",
       institution: "National University (Chattogram Government College)",
       year: "2022",
-      gpa: "GPA: 2.91 out of 4.00",
+      gpa: "CGPA: 2.91 out of 4.00",
       description: "Advanced study in analytical communication, literature, research methodologies, and professional composition."
     },
     {
       degree: "Bachelor of Arts (B.A.) in English",
       institution: "National University (Patiya Government College)",
       year: "2021",
-      gpa: "GPA: 2.80 out of 4.00",
+      gpa: "CGPA: 2.80 out of 4.00",
       description: "Foundation in English language proficiency, written syntax, critical analysis, and verbal communication."
     }
   ],

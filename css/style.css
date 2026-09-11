@@ -158,6 +158,16 @@ ul {
 .section {
   padding: 5.5rem 0;
   position: relative;
+  scroll-margin-top: calc(var(--nav-height) + 1.25rem);
+}
+
+section[id] {
+  scroll-margin-top: calc(var(--nav-height) + 1.25rem);
+}
+
+body.nav-locked {
+  overflow: hidden !important;
+  touch-action: none;
 }
 
 .section-alt {
@@ -311,18 +321,20 @@ ul {
   flex-shrink: 0;
 }
 
-/* Theme Toggle Button */
+/* Theme Toggle Button Base */
 .theme-toggle-btn {
   width: 38px;
   height: 38px;
   border-radius: var(--radius-md);
   background-color: var(--bg-tertiary);
   color: var(--text-secondary);
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--border-color);
   transition: all var(--transition-fast);
+  cursor: pointer;
+  flex-shrink: 0;
 }
 
 .theme-toggle-btn:hover {
@@ -347,16 +359,81 @@ ul {
   display: none;
 }
 
+/* Header Mobile Controls (Hidden on desktop) */
+.header-mobile-controls {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* Mobile Drawer Specific Elements (Hidden on desktop) */
+.drawer-header,
+.drawer-theme-row,
+.drawer-quick-contacts,
+.nav-link-icon,
+.nav-backdrop {
+  display: none;
+}
+
+/* Animated Hamburger Button */
 .hamburger-btn {
   display: none;
   width: 40px;
   height: 40px;
+  padding: 0;
   border-radius: var(--radius-md);
   background-color: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  z-index: 1002;
+  position: relative;
+}
+
+.hamburger-btn:hover {
+  background-color: var(--border-color);
+}
+
+.hamburger-btn:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: 2px;
+}
+
+.hamburger-box {
+  width: 20px;
+  height: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.hamburger-line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+  transform-origin: center;
+}
+
+.hamburger-btn.is-active .line-1 {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.hamburger-btn.is-active .line-2 {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.hamburger-btn.is-active .line-3 {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 /* --- Reusable Buttons & Badges --- */
@@ -622,7 +699,7 @@ ul {
 
 .hero-metrics {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1.25rem;
   padding-top: 1.5rem;
   margin-top: 0.5rem;

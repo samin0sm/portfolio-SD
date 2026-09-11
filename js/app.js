@@ -16,17 +16,26 @@ document.addEventListener("DOMContentLoaded", () => {
 function initTheme() {
   const savedTheme = localStorage.getItem("sazid_portfolio_theme") || "light";
   document.documentElement.setAttribute("data-theme", savedTheme);
+  updateThemeUI(savedTheme);
 
-  const themeToggleBtn = document.getElementById("themeToggleBtn");
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener("click", () => {
+  const themeToggleBtns = document.querySelectorAll(".theme-toggle-btn");
+  themeToggleBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
       const currentTheme = document.documentElement.getAttribute("data-theme");
       const nextTheme = currentTheme === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", nextTheme);
       localStorage.setItem("sazid_portfolio_theme", nextTheme);
+      updateThemeUI(nextTheme);
       showToast(`Switched to ${nextTheme === "dark" ? "Executive Dark" : "Corporate Light"} mode`);
     });
-  }
+  });
+}
+
+function updateThemeUI(theme) {
+  const modeTexts = document.querySelectorAll(".theme-mode-text");
+  modeTexts.forEach(el => {
+    el.textContent = theme === "dark" ? "Executive Dark" : "Corporate Light";
+  });
 }
 
 /* ==========================================================================
@@ -35,25 +44,81 @@ function initTheme() {
 function initNavigation() {
   const hamburgerBtn = document.getElementById("hamburgerBtn");
   const mainNav = document.getElementById("mainNav");
+  const navBackdrop = document.getElementById("navBackdrop");
+  const drawerCloseBtn = document.getElementById("drawerCloseBtn");
   const navLinks = document.querySelectorAll(".nav-link");
+
+  function openMenu() {
+    if (!mainNav || !hamburgerBtn) return;
+    mainNav.classList.add("nav-open");
+    hamburgerBtn.classList.add("is-active");
+    hamburgerBtn.setAttribute("aria-expanded", "true");
+    if (navBackdrop) navBackdrop.classList.add("active");
+    document.body.classList.add("nav-locked");
+  }
+
+  function closeMenu() {
+    if (!mainNav || !hamburgerBtn) return;
+    mainNav.classList.remove("nav-open");
+    hamburgerBtn.classList.remove("is-active");
+    hamburgerBtn.setAttribute("aria-expanded", "false");
+    if (navBackdrop) navBackdrop.classList.remove("active");
+    document.body.classList.remove("nav-locked");
+  }
 
   if (hamburgerBtn && mainNav) {
     hamburgerBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      mainNav.classList.toggle("nav-open");
+      const isOpen = mainNav.classList.contains("nav-open");
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
+
+    if (drawerCloseBtn) {
+      drawerCloseBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        closeMenu();
+      });
+    }
+
+    if (navBackdrop) {
+      navBackdrop.addEventListener("click", () => {
+        closeMenu();
+      });
+    }
 
     // Close menu when a nav link is clicked
     navLinks.forEach(link => {
       link.addEventListener("click", () => {
-        mainNav.classList.remove("nav-open");
+        closeMenu();
       });
     });
 
     // Close menu when clicking outside on mobile
     document.addEventListener("click", (e) => {
-      if (mainNav.classList.contains("nav-open") && !mainNav.contains(e.target) && !hamburgerBtn.contains(e.target)) {
-        mainNav.classList.remove("nav-open");
+      if (
+        mainNav.classList.contains("nav-open") &&
+        !mainNav.contains(e.target) &&
+        !hamburgerBtn.contains(e.target)
+      ) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on Escape key press
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && mainNav.classList.contains("nav-open")) {
+        closeMenu();
+      }
+    });
+
+    // Close menu automatically on window resize to desktop
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1024 && mainNav.classList.contains("nav-open")) {
+        closeMenu();
       }
     });
   }
@@ -65,7 +130,7 @@ function initNavigation() {
     const header = document.getElementById("siteHeader");
 
     if (header) {
-      if (scrollY > 30) {
+      if (scrollY > 20) {
         header.classList.add("scrolled");
       } else {
         header.classList.remove("scrolled");
@@ -74,12 +139,12 @@ function initNavigation() {
 
     sections.forEach(current => {
       const sectionHeight = current.offsetHeight;
-      const sectionTop = current.offsetTop - 140;
+      const sectionTop = current.offsetTop - 120;
       const sectionId = current.getAttribute("id");
       const navTarget = document.querySelector(`.nav-link[href*="${sectionId}"]`);
 
       if (navTarget) {
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
           navTarget.classList.add("active");
         } else {
           navTarget.classList.remove("active");
@@ -87,6 +152,8 @@ function initNavigation() {
       }
     });
   }, { passive: true });
+
+  window.closeMobileNav = closeMenu;
 }
 
 /* ==========================================================================
@@ -361,6 +428,9 @@ function handleModalBackdropClick(e) {
    CV / RESUME MODAL SYSTEM
    ========================================================================== */
 function openCvModal() {
+  if (typeof window.closeMobileNav === "function") {
+    window.closeMobileNav();
+  }
   const cvModalBackdrop = document.getElementById("cvModalBackdrop");
   if (cvModalBackdrop) {
     cvModalBackdrop.classList.add("active");

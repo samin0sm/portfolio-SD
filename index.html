@@ -38,19 +38,79 @@
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <!-- Mobile Drawer Header -->
+        <div class="drawer-header">
+          <div class="drawer-profile">
+            <div class="drawer-avatar">
+              <img src="assets/images/sazid-portrait.jpg" alt="Tanvir Anjum Sazid" width="40" height="40">
+            </div>
+            <div class="drawer-profile-info">
+              <span class="drawer-name">Tanvir Anjum Sazid</span>
+              <span class="drawer-status"><span class="status-dot"></span> Available for Hire</span>
+            </div>
+          </div>
+          <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
         <ul class="nav-links">
-          <li><a href="#about" class="nav-link" id="navAbout">About</a></li>
-          <li><a href="#education" class="nav-link" id="navEducation">Education</a></li>
-          <li><a href="#experience" class="nav-link" id="navExperience">Experience</a></li>
-          <li><a href="#skills" class="nav-link" id="navSkills">Skills</a></li>
-          <li><a href="#capabilities" class="nav-link" id="navCapabilities">Capabilities</a></li>
-          <li><a href="#projects" class="nav-link" id="navProjects">Portfolio</a></li>
-          <li><a href="#references" class="nav-link" id="navReferences">References</a></li>
-          <li><a href="#contact" class="nav-link" id="navContact">Contact</a></li>
+          <li>
+            <a href="#about" class="nav-link" id="navAbout">
+              <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              <span>About</span>
+            </a>
+          </li>
+          <li>
+            <a href="#education" class="nav-link" id="navEducation">
+              <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>Education</span>
+            </a>
+          </li>
+          <li>
+            <a href="#experience" class="nav-link" id="navExperience">
+              <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <span>Experience</span>
+            </a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link" id="navSkills">
+              <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span>Skills</span>
+            </a>
+          </li>
+          <li>
+            <a href="#capabilities" class="nav-link" id="navCapabilities">
+              <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              <span>Capabilities</span>
+            </a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" id="navProjects">
+              <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+              <span>Portfolio</span>
+            </a>
+          </li>
+          <li>
+            <a href="#references" class="nav-link" id="navReferences">
+              <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+              <span>References</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" id="navContact">
+              <svg class="nav-link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Contact</span>
+            </a>
+          </li>
         </ul>
 
         <div class="header-actions">
-          <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <!-- Desktop Theme Toggle -->
+          <button class="theme-toggle-btn desktop-theme-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
             <!-- Sun Icon (shown in dark mode) -->
             <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="5"></circle>
@@ -87,17 +147,64 @@
               <span>View</span>
             </button>
           </div>
+
+          <!-- Mobile Drawer Theme Switch Bar -->
+          <div class="drawer-theme-row">
+            <span class="drawer-theme-label">Appearance</span>
+            <button class="drawer-theme-toggle theme-toggle-btn" aria-label="Toggle Theme Mode">
+              <span class="theme-mode-text">Theme Mode</span>
+              <div class="theme-switch-pill">
+                <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+              </div>
+            </button>
+          </div>
+
+          <!-- Drawer Quick Contacts -->
+          <div class="drawer-quick-contacts">
+            <a href="mailto:tanjum643@gmail.com" class="drawer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>tanjum643@gmail.com</span>
+            </a>
+            <a href="tel:+8801840071372" class="drawer-contact-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>+880 1840-071372</span>
+            </a>
+          </div>
         </div>
       </nav>
 
-      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Mobile Menu">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
+      <!-- Header Mobile Controls (Theme Toggle & Animated Hamburger) -->
+      <div class="header-mobile-controls">
+        <button class="theme-toggle-btn mobile-bar-theme-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Navigation Menu" aria-expanded="false" aria-controls="mainNav">
+          <span class="hamburger-box">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+          </span>
+        </button>
+      </div>
     </div>
+
+    <!-- Mobile Backdrop Overlay -->
+    <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
   </header>
 
   <!-- =========================================================================
@@ -162,12 +269,8 @@
         <!-- Metric highlights -->
         <div class="hero-metrics">
           <div class="metric-item">
-            <span class="metric-value">M.A. &amp; B.A.</span>
+            <span class="metric-value">B.A. &amp; M.A.</span>
             <span class="metric-label">English (National Univ. Colleges)</span>
-          </div>
-          <div class="metric-item">
-            <span class="metric-value">GPA 5.00</span>
-            <span class="metric-label">SSC Science (Academic Excellence)</span>
           </div>
           <div class="metric-item">
             <span class="metric-value">9+ Years</span>
@@ -459,9 +562,9 @@
             <div class="edu-university">National University</div>
             
             <div class="edu-meta-grid">
-              <div class="edu-gpa-pill">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                GPA: 2.91 / 4.00
+              <div class="edu-gpa-pill gpa-high">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                CGPA: 2.91 / 4.00
               </div>
               <p class="edu-desc">
                 Focus on advanced formal English communication, critical text analysis, research methodologies, and structured analytical documentation.
@@ -489,9 +592,9 @@
             <div class="edu-university">National University</div>
             
             <div class="edu-meta-grid">
-              <div class="edu-gpa-pill">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                GPA: 2.80 / 4.00
+              <div class="edu-gpa-pill gpa-high">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                CGPA: 2.80 / 4.00
               </div>
               <p class="edu-desc">
                 Developed core competencies in English language structures, written correspondence, professional presentation delivery, and analytical thinking.
@@ -1696,12 +1799,12 @@
 
           <div class="cv-edu-item">
             <div class="cv-item-title">Bachelor of Arts (B.A.), English</div>
-            <div class="cv-item-meta">Patiya Govt. College, National University | Passing Year: 2021 | GPA: 2.80 / 4.00</div>
+            <div class="cv-item-meta">Patiya Govt. College, National University | Passing Year: 2021 | CGPA: 2.80 / 4.00</div>
           </div>
 
           <div class="cv-edu-item">
             <div class="cv-item-title">Master of Arts (M.A.), English</div>
-            <div class="cv-item-meta">Chattogram Govt. College, National University | GPA: 2.91 / 4.00</div>
+            <div class="cv-item-meta">Chattogram Govt. College, National University | CGPA: 2.91 / 4.00</div>
           </div>
 
           <!-- Language Proficiency -->
