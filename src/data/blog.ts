@@ -28,7 +28,7 @@ export const blogPostsData: BlogPost[] = [
     author: {
       name: "Tanvir Anjum Sazid",
       role: "Banking & Admin Specialist",
-      avatar: "/assets/images/sazid-portrait.jpg",
+      avatar: "/assets/images/sazid_portfolio pic.jpeg",
     },
     tags: ["KYC", "Compliance", "Banking", "Risk Prevention"],
     featured: true,
@@ -45,7 +45,7 @@ export const blogPostsData: BlogPost[] = [
     author: {
       name: "Tanvir Anjum Sazid",
       role: "Banking & Admin Specialist",
-      avatar: "/assets/images/sazid-portrait.jpg",
+      avatar: "/assets/images/sazid_portfolio pic.jpeg",
     },
     tags: ["Microsoft Excel", "Productivity", "VLOOKUP", "Spreadsheets"],
   },
@@ -61,7 +61,7 @@ export const blogPostsData: BlogPost[] = [
     author: {
       name: "Tanvir Anjum Sazid",
       role: "Banking & Admin Specialist",
-      avatar: "/assets/images/sazid-portrait.jpg",
+      avatar: "/assets/images/sazid_portfolio pic.jpeg",
     },
     tags: ["SOP", "Document Control", "Process Management"],
   },
@@ -77,7 +77,7 @@ export const blogPostsData: BlogPost[] = [
     author: {
       name: "Tanvir Anjum Sazid",
       role: "Banking & Admin Specialist",
-      avatar: "/assets/images/sazid-portrait.jpg",
+      avatar: "/assets/images/sazid_portfolio pic.jpeg",
     },
     tags: ["Customer Service", "Conflict Resolution", "Communication"],
   },

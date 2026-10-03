@@ -195,7 +195,7 @@ export const heroData: HeroData = {
   phone: "+8801864759644",
   description:
     "Motivated and detail-oriented graduate with strong written and verbal communication, analytical, and organizational capabilities. Seeking to contribute to banking operations, customer service excellence, document processing, and institutional compliance with integrity and precision.",
-  portrait: "/assets/images/sazid-portrait.jpg",
+  portrait: "/assets/images/sazid_portfolio pic.jpeg",
   cvPdf: "/assets/cv/TANVIR_ANJUM_SAZID_CV.pdf",
   cvDocx: "/assets/cv/TANVIR_ANJUM_SAZID_CV.docx",
 };
