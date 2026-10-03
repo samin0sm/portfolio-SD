@@ -18,7 +18,7 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import ServiceCarousel from "@/components/ServiceCarousel";
 import ReviewCarousel from "@/components/ReviewCarousel";
 import Pricing from "@/components/Pricing";
-import { Download, Mail, ArrowRight, MapPin, Sparkles, CheckCircle2, Shield, Eye } from "lucide-react";
+import { Download, Mail, ArrowRight, MapPin, Eye, Shield } from "lucide-react";
 
 export default function HomePage() {
   return (
