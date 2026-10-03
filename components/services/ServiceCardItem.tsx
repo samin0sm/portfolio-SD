@@ -77,7 +77,7 @@ export const ServiceCardItem: React.FC<ServiceCardItemProps> = ({ service }) => 
       </p>
 
       {/* Grid: Core Capabilities & Deliverables */}
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem", marginBottom: "1.75rem" }}>
+      <div className="responsive-grid-2" style={{ marginBottom: "1.75rem" }}>
         <div
           style={{
             backgroundColor: "var(--bg-secondary)",
@@ -127,7 +127,7 @@ export const ServiceCardItem: React.FC<ServiceCardItemProps> = ({ service }) => 
           <h4 style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-primary)", marginBottom: "0.75rem" }}>
             Operational Workflow:
           </h4>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0.75rem" }}>
+          <div className="responsive-grid-4" style={{ gap: "0.75rem" }}>
             {detail.workflow.map((w, idx) => (
               <div
                 key={idx}
@@ -151,7 +151,7 @@ export const ServiceCardItem: React.FC<ServiceCardItemProps> = ({ service }) => 
         </div>
       )}
 
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "1.25rem", borderTop: "1px solid var(--border-color)" }}>
+      <div className="service-card-footer-row" style={{ paddingTop: "1.25rem", borderTop: "1px solid var(--border-color)" }}>
         <div style={{ display: "flex", gap: "0.4rem", flexWrap: "wrap" }}>
           {detail?.toolsUsed.map((tool, ti) => (
             <span key={ti} className="project-skill-pill">

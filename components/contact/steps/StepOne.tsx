@@ -51,7 +51,7 @@ export const StepOne: React.FC<StepOneProps> = ({ formData, onChange }) => {
         />
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
+      <div className="form-responsive-grid">
         <div className="form-group">
           <label className="form-label" htmlFor="email">
             Corporate Email Address *

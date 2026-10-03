@@ -36,7 +36,7 @@ export const StepThree: React.FC<StepThreeProps> = ({ formData, onChange }) => {
 
       <div className="form-group">
         <label className="form-label">Work Location &amp; Mode *</label>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6rem" }}>
+        <div className="form-responsive-grid" style={{ gap: "0.6rem" }}>
           {locations.map((loc) => {
             const isSelected = formData.jobLocation === loc;
             return (

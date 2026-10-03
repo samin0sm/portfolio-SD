@@ -28,14 +28,7 @@ export default function ServicesPage() {
         </div>
 
         {/* SLA & Service Guarantees */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "1.5rem",
-            marginBottom: "3.5rem",
-          }}
-        >
+        <div className="responsive-grid-3" style={{ marginBottom: "3.5rem" }}>
           <div className="stat-card" style={{ padding: "1.75rem" }}>
             <div style={{ color: "var(--brand-accent)", marginBottom: "0.75rem" }}>
               <ShieldCheck size={28} />

@@ -36,7 +36,7 @@ export const ContactProcess: React.FC = () => {
         <p className="section-desc">Transparent and rapid 4-step hiring process.</p>
       </div>
 
-      <div className="services-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+      <div className="responsive-grid-4">
         {steps.map((step, idx) => (
           <div key={idx} className="stat-card" style={{ padding: "1.75rem" }}>
             <div

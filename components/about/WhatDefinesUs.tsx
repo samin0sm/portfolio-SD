@@ -19,7 +19,7 @@ const getIcon = (iconName: string) => {
 
 export const WhatDefinesUs: React.FC = () => {
   return (
-    <div className="services-grid" style={{ gridTemplateColumns: "repeat(4, 1fr)" }}>
+    <div className="responsive-grid-4">
       {whatDefinesUs.map((item) => (
         <div key={item.id} className="stat-card" style={{ padding: "1.75rem" }}>
           <div style={{ color: "var(--brand-accent)", marginBottom: "1rem" }}>{getIcon(item.icon)}</div>

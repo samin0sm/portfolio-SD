@@ -32,6 +32,7 @@ export const StepFour: React.FC<StepFourProps> = ({ formData, summary, onChange 
 
       {/* Summary Box */}
       <div
+        className="modal-doc-meta-grid"
         style={{
           backgroundColor: "var(--bg-secondary)",
           border: "1px solid var(--border-color)",
@@ -39,9 +40,6 @@ export const StepFour: React.FC<StepFourProps> = ({ formData, summary, onChange 
           padding: "1rem 1.25rem",
           marginBottom: "1.5rem",
           fontSize: "0.825rem",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "0.5rem",
         }}
       >
         <div>

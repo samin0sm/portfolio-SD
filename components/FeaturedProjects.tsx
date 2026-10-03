@@ -91,15 +91,13 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ projects }) 
               {selectedProject.modalContent.type === "document" && (
                 <div>
                   <div
+                    className="modal-doc-meta-grid"
                     style={{
                       backgroundColor: "var(--bg-secondary)",
                       padding: "1rem",
                       borderRadius: "var(--radius-md)",
                       marginBottom: "1.25rem",
                       fontSize: "0.85rem",
-                      display: "grid",
-                      gridTemplateColumns: "1fr 1fr",
-                      gap: "0.5rem",
                       border: "1px solid var(--border-color)",
                     }}
                   >

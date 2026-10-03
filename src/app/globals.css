@@ -1850,6 +1850,65 @@ ul {
   color: var(--brand-accent);
 }
 
+/* Responsive Utility Classes */
+.responsive-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.responsive-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.responsive-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.form-responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.modal-doc-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.milestone-card-flex {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.service-card-footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.blog-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.blog-search-wrapper {
+  position: relative;
+  min-width: 260px;
+}
+
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
   .hero-grid {
@@ -1882,6 +1941,14 @@ ul {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .responsive-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .responsive-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
   }
@@ -1891,17 +1958,75 @@ ul {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .responsive-grid-2,
+  .responsive-grid-3,
+  .responsive-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .milestone-card-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .blog-search-wrapper {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .blog-filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tabs-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tab-btn {
+    flex-shrink: 0;
+  }
+}
+
 @media (max-width: 640px) {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
   .hero-name {
-    font-size: 2.35rem;
+    font-size: 2.15rem;
+  }
+
+  .hero-title {
+    font-size: 1.1rem;
+  }
+
+  .hero-intro {
+    font-size: 0.95rem;
   }
 
   .section {
-    padding: 3.5rem 0;
+    padding: 3rem 0;
   }
 
   .section-title {
-    font-size: 1.75rem;
+    font-size: 1.65rem;
+  }
+
+  .section-desc {
+    font-size: 0.925rem;
   }
 
   .stats-grid {
@@ -1910,6 +2035,23 @@ ul {
 
   .projects-grid, .services-grid, .pricing-grid {
     grid-template-columns: 1fr;
+  }
+
+  .form-responsive-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-doc-meta-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card-footer-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .service-card-footer-row .btn {
+    width: 100%;
   }
 
   .spreadsheet-kpi-grid {
@@ -1925,4 +2067,72 @@ ul {
     gap: 1rem;
     text-align: center;
   }
+
+  /* Touch & Mobile Dialog Optimizations */
+  .modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .modal-dialog {
+    max-height: 94vh;
+    border-radius: var(--radius-lg);
+  }
+
+  .modal-header {
+    padding: 1rem 1.25rem;
+  }
+
+  .modal-body {
+    padding: 1.25rem 1rem;
+  }
+
+  .modal-title {
+    font-size: 1.15rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .contact-step-wizard,
+  .contact-info-card,
+  .review-card,
+  .pricing-card,
+  .tab-panel {
+    padding: 1.25rem 1rem !important;
+  }
+
+  .steps-indicators {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .brand-role {
+    display: none;
+  }
+
+  .brand-logo {
+    gap: 0.5rem;
+  }
 }
+
+@media (max-width: 480px) {
+  .spreadsheet-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-name {
+    font-size: 1.85rem;
+  }
+}
+

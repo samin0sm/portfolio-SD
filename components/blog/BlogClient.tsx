@@ -27,16 +27,7 @@ export const BlogClient: React.FC = () => {
   return (
     <div>
       {/* Search & Category Filter Bar */}
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-between",
-          alignItems: "center",
-          gap: "1rem",
-          marginBottom: "2.5rem",
-        }}
-      >
+      <div className="blog-filter-bar">
         <div className="tabs-nav" style={{ margin: 0 }}>
           {categories.map((cat) => (
             <button
@@ -50,7 +41,7 @@ export const BlogClient: React.FC = () => {
           ))}
         </div>
 
-        <div style={{ position: "relative", minWidth: "260px" }}>
+        <div className="blog-search-wrapper">
           <Search
             size={16}
             style={{

@@ -4,7 +4,7 @@ import { UserCheck, Mail, Phone, Building } from "lucide-react";
 
 export const AboutTeam: React.FC = () => {
   return (
-    <div className="services-grid" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+    <div className="responsive-grid-2">
       {mentorReferences.map((ref) => (
         <div key={ref.id} className="stat-card" style={{ padding: "2rem" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem" }}>

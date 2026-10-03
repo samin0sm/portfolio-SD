@@ -49,12 +49,10 @@ export default function CasesPage() {
             {Object.entries(detailedCasesData).map(([key, detailedCase]) => (
               <div
                 key={key}
-                className="stat-card"
+                className="stat-card responsive-grid-2"
                 style={{
-                  padding: "2.5rem 2rem",
-                  display: "grid",
-                  gridTemplateColumns: "1.2fr 0.8fr",
-                  gap: "2.5rem",
+                  padding: "1.75rem",
+                  gap: "2rem",
                 }}
               >
                 <div>

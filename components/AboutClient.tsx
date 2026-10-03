@@ -54,12 +54,9 @@ export const AboutClient: React.FC = () => {
           {educationList.map((edu, idx) => (
             <div
               key={idx}
-              className="stat-card"
+              className="stat-card responsive-grid-2"
               style={{
-                display: "grid",
-                gridTemplateColumns: "1.5fr 1fr",
-                gap: "2rem",
-                padding: "2rem",
+                padding: "1.75rem",
               }}
             >
               <div>
@@ -106,12 +103,9 @@ export const AboutClient: React.FC = () => {
           {careerMilestones.map((m, idx) => (
             <div
               key={idx}
-              className="stat-card"
+              className="stat-card milestone-card-flex"
               style={{
-                display: "flex",
-                alignItems: "center",
-                gap: "2rem",
-                padding: "1.75rem",
+                padding: "1.5rem",
               }}
             >
               <div
@@ -126,7 +120,7 @@ export const AboutClient: React.FC = () => {
                 {m.year}
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.25rem" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.25rem", flexWrap: "wrap" }}>
                   <h4 style={{ fontSize: "1.1rem", fontWeight: 700 }}>{m.title}</h4>
                   <span className="section-tag" style={{ margin: 0, padding: "0.15rem 0.5rem", fontSize: "0.7rem" }}>
                     {m.badge}

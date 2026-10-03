@@ -38,7 +38,7 @@ export const StepTwo: React.FC<StepTwoProps> = ({ formData, onChange }) => {
 
       <div className="form-group">
         <label className="form-label">Primary Operational Domain *</label>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.6rem" }}>
+        <div className="form-responsive-grid" style={{ gap: "0.6rem" }}>
           {roleCategories.map((cat) => {
             const isSelected = formData.roleCategory === cat;
             return (
